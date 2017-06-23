@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AstroWeather</string>
+    <string-array name="unit_array">
+        <item>Metrics</item>
+        <item>Imperial</item>
+    </string-array>
+</resources>

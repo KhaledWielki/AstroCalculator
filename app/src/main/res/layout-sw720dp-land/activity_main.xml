@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weather"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:tag="big_screen"
+    android:weightSum="1">
+
+    <fragment
+        android:id="@+id/todayFragment"
+        android:name="com.example.adam.astrocalculator.fragment.TodayFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        tools:layout="@layout/fragment_today" />
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.85"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/nonweatherFragment"
+            android:name="com.example.adam.astrocalculator.fragment.ForecastFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            tools:layout="@layout/fragment_nonweather" />
+
+        <fragment
+            android:id="@+id/forecastFragment"
+            android:name="com.example.adam.astrocalculator.fragment.NonweatherFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            tools:layout="@layout/fragment_forecast" />
+
+    </LinearLayout>
+
+</LinearLayout>
